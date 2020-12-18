@@ -3,16 +3,16 @@ package com.codewithchang;
 import java.util.*;
 
 public class Main {
-
+// Driver method
     public static void main(String[] args) {
-        String secretWord = "Tenet";
+        int num = 5;
+        System.out.println("Factorial of "+ num + " is " + factorial(5));
+    }
+// method to find factorial of given number
+    static int factorial(int n) {
+        if (n == 0)
+            return 1;
 
-        byte[] strAsByteArray = secretWord.getBytes();
-        byte[] result = new byte[strAsByteArray.length];
-
-        for (int i = 0; i < strAsByteArray.length; i++) {
-            result[i] = strAsByteArray[strAsByteArray.length - i -1];
-            System.out.println(new String(result));
-        }
+        return n * factorial(n-1);
     }
 }
